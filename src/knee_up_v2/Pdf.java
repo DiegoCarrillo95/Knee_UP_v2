@@ -6,8 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.jfree.chart.JFreeChart;
-
-import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;

@@ -349,15 +349,15 @@ public class IniciarTeste  {
 		
 		JOptionPane.showMessageDialog(null,"TESTE 1 - Para iniciar pressione OK","Knee UP",JOptionPane.INFORMATION_MESSAGE);
 		
-		Gráfico graf1 = portaserial.realizarTeste(1,NomePaciente,DataTeste);
+		Grafico graf1 = portaserial.realizarTeste(1,NomePaciente,DataTeste);
 		
 		JOptionPane.showMessageDialog(null,"TESTE 2 - Para iniciar pressione OK","Knee UP",JOptionPane.INFORMATION_MESSAGE);
 		
-		Gráfico graf2 = portaserial.realizarTeste(2,NomePaciente,DataTeste);
+		Grafico graf2 = portaserial.realizarTeste(2,NomePaciente,DataTeste);
 		
 		JOptionPane.showMessageDialog(null,"TESTE 3 - Para iniciar pressione OK","Knee UP",JOptionPane.INFORMATION_MESSAGE);
 		
-		Gráfico graf3 = portaserial.realizarTeste(3,NomePaciente,DataTeste);
+		Grafico graf3 = portaserial.realizarTeste(3,NomePaciente,DataTeste);
 		
 		Pdf relatorio = new Pdf();
 		try {

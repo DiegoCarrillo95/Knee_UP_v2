@@ -22,7 +22,7 @@ public class PortaSerial {
 		chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_SCANNER, 0, 0);
 
 		if (chosenPort.openPort()) {
-			chosenPort.setBaudRate(19200);
+			chosenPort.setBaudRate(38400);
 			portaconectada = true;
 			System.out.println("abriu porta");
 		}
@@ -88,7 +88,7 @@ public class PortaSerial {
 		return returnvalue;
 	}
 
-	public Gráfico realizarTeste(int numTeste, String NomePaciente, String DataTeste) throws IOException {
+	public Grafico realizarTeste(int numTeste, String NomePaciente, String DataTeste) throws IOException {
 
 		String str = new String("iniciarteste"); // STRING PARA TESTAR O ARDUINO - NÃO MUDAR
 		
@@ -135,10 +135,12 @@ public class PortaSerial {
 		int received = in.read();
 		System.out.println("recebeu " + received);
 
-		if (received == 77) {
-			System.out.println("leitura confirmada");
-
+		while (received != 77) {
+			
 		}
+		System.out.println("leitura confirmada");
+
+		
 
 		in.close();
 		
@@ -191,7 +193,7 @@ public class PortaSerial {
 		
 		txt1.closeFile();
 		
-		Gráfico graf = new Gráfico();
+		Grafico graf = new Grafico();
 		graf.GeraGrafico(txt1.getNomeArquivo(), numTeste);
 		
 		System.out.println("terminou geração de gráfico");
